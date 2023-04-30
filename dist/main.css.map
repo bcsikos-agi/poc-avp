@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","mappings":"AAAA;IACI,sBAAsB;AAC1B,C;ACFA;IACI,qBAAqB;AACzB,C","sources":["webpack://poc-avp/./src/containers/Frame.css","webpack://poc-avp/./src/App.css"],"sourcesContent":[".Frame {\n    background-color: aqua;\n}",".h1 {\n    background-color: red;\n}"],"names":[],"sourceRoot":""}

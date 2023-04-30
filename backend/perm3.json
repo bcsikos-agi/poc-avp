@@ -1,0 +1,98 @@
+[
+    {
+        "Identifier": {
+            "EntityType": "APP::User",
+            "EntityId": "auth0|63f759c76bdb53500468a366"
+        },
+        "Attributes": {
+            "division": {
+                "String": "sales"
+            },
+            "privileges": {
+                "EntityIdentifier": {
+                    "EntityType": "APP::Group",
+                    "EntityId": "developers"
+                }
+            }
+        },
+        "Parents": [
+            {
+                "EntityType": "API::Role",
+                "EntityId": "admin"
+            },
+            {
+                "EntityType": "APP::Group",
+                "EntityId": "developers"
+            }
+        ]
+    },
+    {
+        "Identifier": {
+            "EntityType": "API::Role",
+            "EntityId": "admin"
+        },
+        "Parents": [
+            {
+                "EntityType": "API::Role",
+                "EntityId": "user"
+            }
+        ]
+    },
+    {
+        "Identifier": {
+            "EntityType": "APP::Group",
+            "EntityId": "developers"
+        },
+        "Attributes": {
+            "privileges": {
+                "Set": [
+                  {
+                      "String": "limited_operation"
+                  },
+                  {
+                      "String": "priviliged_operation"
+                  },
+                  {
+                      "String": "app_specific_other_action"
+                  }
+                ]
+            }
+        }
+    },
+    {
+        "Identifier": {
+            "EntityType": "API::Role",
+            "EntityId": "user"
+        }
+    },
+    {
+        "Identifier": {
+            "EntityType": "APP::Resource",
+            "EntityId": "doc2"
+        },
+        "Parents": [
+            {
+                "EntityType": "APP::Folder",
+                "EntityId": "folder1"
+            }
+        ]
+    },
+    {
+        "Identifier": {
+            "EntityType": "APP::Folder",
+            "EntityId": "folder1"
+        },
+        "Parents": [
+            {
+                "EntityType": "APP::Collection",
+                "EntityId": "all_folders"
+            }
+        ]
+    },
+    {
+        "Identifier": {
+            "EntityType": "APP::Collection",
+            "EntityId": "all_folders"
+        }
+    }
+]
